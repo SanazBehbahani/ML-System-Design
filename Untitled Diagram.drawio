@@ -8,7 +8,7 @@
           <mxGeometry x="-1655" y="40" width="775" height="470" as="geometry" />
         </mxCell>
         <mxCell id="X0dmrrOlAeSeErXz5RRt-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;ML Design&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Content based filtering:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Pros:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Ability to recommend new videos, the video profile depends entirely on video features&lt;/li&gt;&lt;li&gt;Ability to capture the unique interests of user: we recommend videos based of users&#39;s previous engagement&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Cons:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Difficult to discover a user&#39;s new interests&lt;/li&gt;&lt;li&gt;&amp;nbsp;Requires domain knowledge, we need to engineer the video features manually&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;collaborative filtering: user-user similarity and video-video similarity --&amp;gt; similar users are interested in similar videos&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Major difference with content based: CF doesn&#39;t use video features&lt;/li&gt;&lt;li&gt;Pros:&lt;/li&gt;&lt;ul&gt;&lt;li&gt;No domain knowledge needed: CF doesn&#39;t rely on video features&lt;/li&gt;&lt;li&gt;Easy to discover user&#39;s new area of interest: recommends videos about new topics that other similar users engaged with&amp;nbsp;&lt;/li&gt;&lt;li&gt;Efficient: faster and less computationally intensive&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Cons:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Coldstart problem: due to lack of historical interaction data for new user or video&lt;/li&gt;&lt;li&gt;can&#39;t handle niche interests:&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;hybrid filtering&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-1655" y="780" width="775" height="860" as="geometry" />
+          <mxGeometry x="-1655" y="770" width="775" height="860" as="geometry" />
         </mxCell>
         <mxCell id="X0dmrrOlAeSeErXz5RRt-15" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-1600" y="500" width="600" height="260" as="geometry" />
@@ -107,6 +107,113 @@
         </mxCell>
         <mxCell id="X0dmrrOlAeSeErXz5RRt-34" value="User A" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-42">
           <mxGeometry x="-10" y="100" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-53" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="X0dmrrOlAeSeErXz5RRt-43" target="X0dmrrOlAeSeErXz5RRt-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-54" value="Similar Users" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X0dmrrOlAeSeErXz5RRt-53">
+          <mxGeometry y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-43" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1370" y="1380" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1160" y="1440" as="sourcePoint" />
+            <mxPoint x="-1160" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-46" value="video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1480" y="1350" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-47" value="video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1480" y="1395" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-48" value="video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1480" y="1440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-49" value="video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1070" y="1440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-50" value="video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1070" y="1395" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-51" value="video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1070" y="1350" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-52" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1180" y="1380" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-55" value="User A" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1380" y="1440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-56" value="User B" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1190" y="1440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-59" value="Like" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="X0dmrrOlAeSeErXz5RRt-43" target="X0dmrrOlAeSeErXz5RRt-47">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1400" y="1430" as="sourcePoint" />
+            <mxPoint x="-1350" y="1380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-1390" y="1420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-60" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="X0dmrrOlAeSeErXz5RRt-43" target="X0dmrrOlAeSeErXz5RRt-46">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1400" y="1390" as="sourcePoint" />
+            <mxPoint x="-1350" y="1350" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-65" value="Like" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X0dmrrOlAeSeErXz5RRt-60">
+          <mxGeometry x="0.0557" y="-1" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-61" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="X0dmrrOlAeSeErXz5RRt-43" target="X0dmrrOlAeSeErXz5RRt-48">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1370" y="1420" as="sourcePoint" />
+            <mxPoint x="-1080" y="1470" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-67" value="Like" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X0dmrrOlAeSeErXz5RRt-61">
+          <mxGeometry x="-0.0706" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-62" value="Like" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="X0dmrrOlAeSeErXz5RRt-52" target="X0dmrrOlAeSeErXz5RRt-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1100" y="1550" as="sourcePoint" />
+            <mxPoint x="-1050" y="1500" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-63" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="X0dmrrOlAeSeErXz5RRt-52" target="X0dmrrOlAeSeErXz5RRt-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1150" y="1400" as="sourcePoint" />
+            <mxPoint x="-1100" y="1350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-68" value="Like" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X0dmrrOlAeSeErXz5RRt-63">
+          <mxGeometry x="0.3271" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-64" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=12 12;" edge="1" parent="1" source="X0dmrrOlAeSeErXz5RRt-52" target="X0dmrrOlAeSeErXz5RRt-49">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1130" y="1435" as="sourcePoint" />
+            <mxPoint x="-1060" y="1420" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-69" value="May Like" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X0dmrrOlAeSeErXz5RRt-64">
+          <mxGeometry x="0.1138" y="-2" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
