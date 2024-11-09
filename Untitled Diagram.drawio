@@ -7,7 +7,7 @@
         <mxCell id="X0dmrrOlAeSeErXz5RRt-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;1. Clarifying Questions&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Business objective: Increase user engagement&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Recommend similar videos to the videos user is watching now or show personalized videos on the homepage? Homepage&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;worldwide located user and different languages?&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Dataset available? or I construct it based on used interaction with the videos?&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;How many videos available on platform? 10 Billion&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;How fast should system recommend the videos? real time when the user loads the homepage --&amp;gt; &amp;lt; 200ms&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;2. Problem statement&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;We want to design a system:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Homepage video recommendation&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Business objective: increase user engagement&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Each time user loads the homepage, the system should recommend most engaging videos&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Users are worldwide and videos are in different languages&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;~ 10 Billion videos on platform&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;recommendation should be served quickly &amp;lt; 200 ms&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;ML Objective:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Increase user engagement&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Maximize number of user clicks --&amp;gt; &amp;nbsp;drawback: model may start recommending clickbaits --&amp;gt; reduce user satisfaction and engagement over time&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Maximize number of completed&amp;nbsp;videos --&amp;gt; drawback: system may recommend shorter videos&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Maximize total watch time --&amp;gt; User spends more time on platform&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;font color=&quot;#ff3399&quot;&gt;Maximize number of relevant videos &lt;/font&gt;--&amp;gt; relevance: watch &amp;gt; half of the video or press like --&amp;gt; relevance score&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1655" y="40" width="775" height="770" as="geometry" />
         </mxCell>
-        <mxCell id="X0dmrrOlAeSeErXz5RRt-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;ML Design&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;for personalized recommendation:&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Content based filtering:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Pros:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Ability to recommend new videos, the video profile depends entirely on video features&lt;/li&gt;&lt;li&gt;Ability to capture the unique interests of user: we recommend videos based of users&#39;s previous engagement&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Cons:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Difficult to discover a user&#39;s new interests&lt;/li&gt;&lt;li&gt;&amp;nbsp;Requires domain knowledge, we need to engineer the video features manually&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;collaborative filtering&lt;/li&gt;&lt;li&gt;hybrid filtering&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;ML Design&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;for personalized recommendation:&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Content based filtering:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Pros:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Ability to recommend new videos, the video profile depends entirely on video features&lt;/li&gt;&lt;li&gt;Ability to capture the unique interests of user: we recommend videos based of users&#39;s previous engagement&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Cons:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Difficult to discover a user&#39;s new interests&lt;/li&gt;&lt;li&gt;&amp;nbsp;Requires domain knowledge, we need to engineer the video features manually&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;collaborative filtering&lt;/li&gt;&lt;li&gt;hybrid filtering&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1655" y="1120" width="775" height="520" as="geometry" />
         </mxCell>
         <mxCell id="X0dmrrOlAeSeErXz5RRt-15" value="" style="group" vertex="1" connectable="0" parent="1">
@@ -57,20 +57,56 @@
         <mxCell id="X0dmrrOlAeSeErXz5RRt-12" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
           <mxGeometry y="70" width="40" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X0dmrrOlAeSeErXz5RRt-28" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1570" y="1360" width="40" height="60" as="geometry" />
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-34" value="User A" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1480" y="1429" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="X0dmrrOlAeSeErXz5RRt-29" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1330" y="1360" width="240" height="80" as="geometry" />
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-42" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-1470" y="1330" width="380" height="230" as="geometry" />
         </mxCell>
-        <mxCell id="X0dmrrOlAeSeErXz5RRt-31" value="Video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1320" y="1380" width="90" height="40" as="geometry" />
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-37" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-42" source="X0dmrrOlAeSeErXz5RRt-28" target="X0dmrrOlAeSeErXz5RRt-31">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X0dmrrOlAeSeErXz5RRt-32" value="Video 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1195" y="1380" width="90" height="40" as="geometry" />
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-28" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-42">
+          <mxGeometry y="40" width="40" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="X0dmrrOlAeSeErXz5RRt-33" value="Video 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1255" y="1480" width="90" height="40" as="geometry" />
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-29" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-42">
+          <mxGeometry x="140" y="30" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-31" value="Video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-42">
+          <mxGeometry x="150" y="50" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-32" value="Video y" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-42">
+          <mxGeometry x="275" y="50" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-42" source="X0dmrrOlAeSeErXz5RRt-33" target="X0dmrrOlAeSeErXz5RRt-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="130" />
+              <mxPoint x="260" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-39" value="Similar Video" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X0dmrrOlAeSeErXz5RRt-38">
+          <mxGeometry x="0.075" y="-8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-33" value="Video z" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-42">
+          <mxGeometry x="215" y="190" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-35" value="User A liked" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-42">
+          <mxGeometry x="210" width="95" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-40" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-42" source="X0dmrrOlAeSeErXz5RRt-33" target="X0dmrrOlAeSeErXz5RRt-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="60" as="sourcePoint" />
+            <mxPoint x="390" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-41" value="User A may like" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="X0dmrrOlAeSeErXz5RRt-40">
+          <mxGeometry x="0.1124" y="-1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
