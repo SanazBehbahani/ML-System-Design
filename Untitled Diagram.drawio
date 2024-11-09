@@ -7,6 +7,71 @@
         <mxCell id="X0dmrrOlAeSeErXz5RRt-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;1. Clarifying Questions&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Business objective: Increase user engagement&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Recommend similar videos to the videos user is watching now or show personalized videos on the homepage? Homepage&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;worldwide located user and different languages?&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Dataset available? or I construct it based on used interaction with the videos?&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;How many videos available on platform? 10 Billion&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;How fast should system recommend the videos? real time when the user loads the homepage --&amp;gt; &amp;lt; 200ms&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;2. Problem statement&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;We want to design a system:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Homepage video recommendation&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Business objective: increase user engagement&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Each time user loads the homepage, the system should recommend most engaging videos&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Users are worldwide and videos are in different languages&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;~ 10 Billion videos on platform&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;recommendation should be served quickly &amp;lt; 200 ms&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;ML Objective:&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Increase user engagement&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Maximize number of user clicks --&amp;gt; &amp;nbsp;drawback: model may start recommending clickbaits --&amp;gt; reduce user satisfaction and engagement over time&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Maximize number of completed&amp;nbsp;videos --&amp;gt; drawback: system may recommend shorter videos&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Maximize total watch time --&amp;gt; User spends more time on platform&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;font color=&quot;#ff3399&quot;&gt;Maximize number of relevant videos &lt;/font&gt;--&amp;gt; relevance: watch &amp;gt; half of the video or press like --&amp;gt; relevance score&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-1655" y="40" width="775" height="770" as="geometry" />
         </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-14" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;ML Design&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;for personalized recommendation:&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Content based filtering:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Pros:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Ability to recommend new videos, the video profile depends entirely on video features&lt;/li&gt;&lt;li&gt;Ability to capture the unique interests of user: we recommend videos based of users&#39;s previous engagement&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Cons:&amp;nbsp;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Difficult to discover a user&#39;s new interests&lt;/li&gt;&lt;li&gt;&amp;nbsp;Requires domain knowledge, we need to engineer the video features manually&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;collaborative filtering&lt;/li&gt;&lt;li&gt;hybrid filtering&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1655" y="1120" width="775" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-15" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-1570" y="820" width="600" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-15" source="X0dmrrOlAeSeErXz5RRt-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="100" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="100" />
+              <mxPoint x="300" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-15" source="X0dmrrOlAeSeErXz5RRt-2" target="X0dmrrOlAeSeErXz5RRt-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="150" />
+              <mxPoint x="200" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-2" value="Video recommendation system" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry x="140" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry x="340" width="120" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-4" value="Video 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry x="355" y="20" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-5" value="Video 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry x="355" y="80" width="95" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-6" value="Video n" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry x="355" y="190" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-7" value="Based on relevance score" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry x="480" y="60" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-10" value="Videos&amp;nbsp;&lt;div&gt;10 Billion&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry x="170" y="180" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-15" source="X0dmrrOlAeSeErXz5RRt-12" target="X0dmrrOlAeSeErXz5RRt-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-12" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-15">
+          <mxGeometry y="70" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-28" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1570" y="1360" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-29" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1330" y="1360" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-31" value="Video x" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1320" y="1380" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-32" value="Video 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1195" y="1380" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-33" value="Video 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1255" y="1480" width="90" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
