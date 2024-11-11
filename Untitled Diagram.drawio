@@ -776,6 +776,116 @@
         <mxCell id="X0dmrrOlAeSeErXz5RRt-211" value="User Embedding (Eu)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-212">
           <mxGeometry x="13.75" width="122.5" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-215" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;u&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Constructing&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;dataset:&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/u&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: normal;&quot;&gt;Extract features from different user-video pairs and labeling them positive or negative based on user feedback. (positive = explicitly liked video or watched more than half of it)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Negative = either choose random videos that are not relevant or choose the ones user disliked&amp;nbsp;&lt;/div&gt;&lt;div&gt;NOTE: data is imbalanced since only fraction of videos are relevant --&amp;gt; under sample majority or oversample minority&lt;/div&gt;&lt;div&gt;Loss function:&lt;/div&gt;&lt;div&gt;the two towers are predicting binary labels --&amp;gt; classification --&amp;gt; cross entropy&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Inference:&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;The system uses embeddings to find the most relevant video for a given user --&amp;gt; NEAREST NEIGHBOR&lt;/div&gt;&lt;div&gt;In collaborative filtering the video encoder is an embedding layer that converts video id to embedding vector (no other features are used)&lt;/div&gt;&lt;div&gt;Pros:&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Utilizes user features such as age/gender&lt;/div&gt;&lt;div&gt;- can handle new users by recommending videos based on user features&lt;/div&gt;&lt;div&gt;Cons:&amp;nbsp;&lt;/div&gt;&lt;div&gt;- slower serving: the model computes user embedding at query time&lt;/div&gt;&lt;div&gt;- training is more expensive&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Evaluation:&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Offline metrics:&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Precision@k: measures the proportion of relevant videos among top k recommended. &amp;nbsp;&lt;/div&gt;&lt;div&gt;- mAP: measures ranking quality of recommended videos&lt;/div&gt;&lt;div&gt;- Diversity: measures how dissimilar recommended videos are --&amp;gt; calculate average pairwise similarity (cosine or dot product) between videos in the recommended list. Low average pairwise similarity = more diverse&lt;/div&gt;&lt;div&gt;Online metrics:&amp;nbsp;&lt;/div&gt;&lt;div&gt;- click trough rate : cons --&amp;gt;. clickbait&lt;/div&gt;&lt;div&gt;- number of completed videos&lt;/div&gt;&lt;div&gt;- total watch time&lt;/div&gt;&lt;div&gt;- explicit user feedback&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Serving:&amp;nbsp;&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Multistage design:&amp;nbsp;&lt;/div&gt;&lt;div&gt;- candid generation&lt;/div&gt;&lt;div&gt;- scoring&amp;nbsp;&lt;/div&gt;&lt;div&gt;- reranking&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1655" y="3690" width="775" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-247" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-1640" y="4050" width="630" height="423" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-227" value="Billions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-216" target="X0dmrrOlAeSeErXz5RRt-218">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="264" />
+              <mxPoint x="100" y="264" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-216" value="Video Corpus" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry y="224" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-229" value="Hundreds" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-217" target="X0dmrrOlAeSeErXz5RRt-223">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="264" />
+              <mxPoint x="340" y="264" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-217" value="Scoring" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;rotation=-90;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="240" y="234" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-228" value="Thousands" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-218" target="X0dmrrOlAeSeErXz5RRt-217">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="264" />
+              <mxPoint x="230" y="264" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-218" value="Candid&amp;nbsp;&lt;div&gt;Generation&lt;/div&gt;" style="verticalLabelPosition=middle;verticalAlign=middle;html=1;shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;size=0.23;arcSize=10;flipV=1;labelPosition=center;align=center;rotation=-90;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="100" y="234" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-219" value="Video features score" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="260" y="343" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-220" value="User features" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="125" y="151" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-221" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="530" y="159" width="100" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-244" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-222" target="X0dmrrOlAeSeErXz5RRt-242">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-222" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="215" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-237" value="Dozens" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-223" target="X0dmrrOlAeSeErXz5RRt-221">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="264" />
+              <mxPoint x="490" y="264" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-223" value="Re-ranking" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="390" y="244" width="75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-226" value="Video 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="550" y="174" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-233" value="Video 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="550" y="224" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-234" value="Video K" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="550" y="324" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-235" value="Top K videos" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="540" y="368" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-239" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-219" target="X0dmrrOlAeSeErXz5RRt-217">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="434" as="sourcePoint" />
+            <mxPoint x="200" y="384" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-240" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-218" target="X0dmrrOlAeSeErXz5RRt-220">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="410" as="sourcePoint" />
+            <mxPoint x="10" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-241" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-217" target="X0dmrrOlAeSeErXz5RRt-220">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="410" as="sourcePoint" />
+            <mxPoint x="10" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-242" value="Feature preparation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="200" y="80" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-243" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="X0dmrrOlAeSeErXz5RRt-247" source="X0dmrrOlAeSeErXz5RRt-242" target="X0dmrrOlAeSeErXz5RRt-220">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-40" y="410" as="sourcePoint" />
+            <mxPoint x="10" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-245" value="Two-tower&lt;div&gt;Prioritize efficiency (lightweight model)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="137.5" y="304" width="102.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="X0dmrrOlAeSeErXz5RRt-246" value="Content-based filtering two-tower&lt;div&gt;Prioritize accuracy (heavier model)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="X0dmrrOlAeSeErXz5RRt-247">
+          <mxGeometry x="305" y="270" width="120" height="86" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
